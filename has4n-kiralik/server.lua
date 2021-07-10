@@ -2,7 +2,7 @@ ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 
-ESX.RegisterServerCallback('has4n::kira-kontrol', function (source, cb, price)
+ESX.RegisterServerCallback('has4n:kira-kontrol', function (source, cb, price)
     local xPlayer = ESX.GetPlayerFromId(source)
     if xPlayer.getMoney() >= price then
     xPlayer.removeMoney(price)
@@ -14,6 +14,6 @@ ESX.RegisterServerCallback('has4n::kira-kontrol', function (source, cb, price)
     kiraladimi = true
 end)
 
-ESX.RegisterServerCallback('has4n::aracBirak', function (source, cb)
+ESX.RegisterServerCallback('has4n:aracBirak', function (source, cb)
     cb(true)
 end)
